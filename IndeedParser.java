@@ -29,7 +29,7 @@ public class IndeedParser {
 
         String api_request_url;
         int results_left = total_results;
-        int start = 0, limit = Math.min(results_left, 25);
+        int start = 0, limit = Math.min(results_left, 25); // Indeed seems to have a cap of 25 results per request
         Client client = ClientBuilder.newClient();
 
         while(results_left > 0) {
